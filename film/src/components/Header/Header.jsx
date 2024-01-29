@@ -1,8 +1,8 @@
 import './Header.css';
 
-function Header({ text, onClick }) {
+function Header({ text }) {
   return (
-    <h1 className="header" onClick={onClick}>
+    <h1 className="header">
       {text}
     </h1>
   );
