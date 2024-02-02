@@ -1,0 +1,11 @@
+.cardlist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px; /* Отступ между карточками */
+  margin-top: 84px;
+}
+.input-button-main {
+  display: flex;
+  gap: 8px;
+  margin-right: 809; /* Отступ справа */
+}

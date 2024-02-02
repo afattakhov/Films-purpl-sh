@@ -9,13 +9,16 @@
   align-items: center;
   width: 100%;
   box-sizing: border-box;
+  background-color:var(--Black-10, rgba(0, 0, 0, 0.10));
+  background: rgba(18, 24, 41, 0.8);
+  backdrop-filter: blur(20px);
+  z-index: 1000;
 }
 
 .navbar-link-block {
   display: flex;
   align-items: center;
 }
-
 
 .logo-navbar {
   width: 40px;

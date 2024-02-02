@@ -1,3 +1,4 @@
+//NavBar.jsx
 import './NavBar.css';
 
 const linkOfNavbar = ['Поиск Фильмов', 'Мои фильмы', 'Войти', 'Выйти'];
