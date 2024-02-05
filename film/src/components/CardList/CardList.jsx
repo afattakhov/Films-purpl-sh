@@ -2,10 +2,7 @@
 import { useState } from 'react';
 import './CardList.css';
 import CardItem from '../CardItem/CardItem';
-import Header from '../Header/Header';
-import Input from '../Input/Input';
-import Button from '../Button/Button';
-import Parag from '../Parag/Parag';
+
 
 const moviesData = [
   {
@@ -59,21 +56,10 @@ const moviesData = [
 ];
 
 function CardList() {
-  const [clickRes, setCklickRes] = useState(0);
   const [data, setData] = useState(moviesData);
-  const clickHandle = () => {
-    setCklickRes((clickRes) => clickRes + 1);
-  };
 
   return (
     <div>
-      <Header text="Поиск" />
-      <Parag text="Введите название фильма, сериала или мультфильма для поиска и добавления в избранное." />
-      <div className="input-button-main">
-        <Input />
-        <Button text={'Нажали ' + `${clickRes}` + ' раз/a'} onClick={clickHandle} />
-      </div>
-
       <div className="cardlist">
         {data.map((el) => (
           <CardItem key={el.id} data={el} />

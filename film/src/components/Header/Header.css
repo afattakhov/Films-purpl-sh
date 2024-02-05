@@ -1,12 +1,5 @@
-.header{
-display: flex;
-color: var(--Grey-50, #EBEEF5);
-font-family: Poppins;
-font-size: 64px;
-font-style: normal;
-font-weight: 600;
-line-height: 80px; /* 125% */
-letter-spacing: -1.28px;
-margin-bottom: 16px; 
-margin-top: 80px;
+.input-button-main {
+  display: flex;
+  gap: 8px;
+  margin-right: 809; /* Отступ справа */
 }

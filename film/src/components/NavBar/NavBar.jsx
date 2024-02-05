@@ -1,7 +1,4 @@
-//NavBar.jsx
 import './NavBar.css';
-
-const linkOfNavbar = ['Поиск Фильмов', 'Мои фильмы', 'Войти', 'Выйти'];
 
 function NavBar() {
   return (
@@ -11,11 +8,15 @@ function NavBar() {
       </div>
 
       <div className="navbar-link-block">
-        {linkOfNavbar.map((el, index) => (
-          <a key={index} href="#" className="link-navbar">
-            {el}
-          </a>
-        ))}
+        <a href="#" className="link-navbar">
+          Поиск Фильмов
+        </a>
+        <a href="#" className="link-navbar">
+          Мои фильмы
+        </a>
+        <a href="#" className="link-navbar">
+          Войти
+        </a>
       </div>
     </div>
   );
