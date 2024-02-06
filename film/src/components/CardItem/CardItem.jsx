@@ -13,8 +13,8 @@ function CardItem({ data }) {
           alt="упс...у фильма нет постера"
         />
       </a>
-      {!data.rating && data.title && <CardRaiting> Нет оценок</CardRaiting>}
-      {data.rating && data.title && <CardRaiting>{data.rating}</CardRaiting>}
+      {!data.rating && <CardRaiting> Нет оценок</CardRaiting>}
+      {data.rating && <CardRaiting>{data.rating}</CardRaiting>}
       <a className="movie-name">{data?.title}</a>
       <Favorites />
     </div>
