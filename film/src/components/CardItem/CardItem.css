@@ -20,20 +20,18 @@
   cursor: pointer; /* Изменение формы курсора при наведении */
 }
 .no-poster {
+  min-height: 400px;
   width: 266px;
-  height: 400px;
   transform: translateY(+50%);
 }
 
-/* Применение стилей к alt тексту */
 .no-poster[alt='упс...у фильма нет постера'] {
   color: red;
 }
 
 .movie-name {
   color: var(--Grey-50, #ebeef5);
-  /* Link/Regular */
-  /* font-family: Poppins; */
+
   font-size: 16px;
   font-style: normal;
   font-weight: 600;

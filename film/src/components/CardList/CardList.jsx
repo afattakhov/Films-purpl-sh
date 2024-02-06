@@ -1,8 +1,6 @@
-//CardList.jsx
 import { useState } from 'react';
 import './CardList.css';
 import CardItem from '../CardItem/CardItem';
-
 
 const moviesData = [
   {
@@ -57,7 +55,7 @@ const moviesData = [
 
 function CardList() {
   const [data, setData] = useState(moviesData);
-
+  if (!data || !data.length) return <p className="cardlist_no">Упс... Таких фильмов нет</p>; // учел и отсувие data (undefined, null) и пустой массив
   return (
     <div>
       <div className="cardlist">

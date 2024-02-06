@@ -11,7 +11,7 @@ function Header() {
     setCklickRes(clickRes);
   };
   return (
-    <>
+    <div className="header-container">
       <NavBar />
       <SearchBar text="Поиск" />
       <Paragraf text="Введите название фильма, сериала или мультфильма для поиска и добавления в избранное." />
@@ -19,7 +19,7 @@ function Header() {
         <Input />
         <Button text="Искать" onClick={clickHandle} />
       </div>
-    </>
+    </div>
   );
 }
 export default Header;

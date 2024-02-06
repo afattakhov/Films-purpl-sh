@@ -4,3 +4,15 @@
   gap: 24px; /* Отступ между карточками */
   margin-top: 84px;
 }
+.cardlist_no {
+  display: flex;
+  color: var(--Grey-50, #ebeef5);
+
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px; 
+  letter-spacing: -1.28px;
+  margin-bottom: 16px;
+  margin-top: 84px;
+}
