@@ -1,0 +1,26 @@
+.favorites {
+  color: #7b6ef6;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.favorites img {
+
+  vertical-align: middle;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.favorites span {
+  margin-top: -1mm;
+}
+.favorites:hover {
+  cursor: pointer; /* Изменение формы курсора при наведении */
+}

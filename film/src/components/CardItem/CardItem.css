@@ -1,0 +1,43 @@
+/* CardLiss.css */
+.card-item {
+  display: inline-flex;
+  padding: 8px 8px 16px 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 12px;
+  background: rgba(32, 40, 62, 0.8);
+  backdrop-filter: blur(40px);
+  position: relative;
+}
+
+.poster {
+  width: 266px;
+  height: 400px;
+  flex-shrink: 0;
+}
+.poster:hover {
+  cursor: pointer; /* Изменение формы курсора при наведении */
+}
+.no-poster {
+  min-height: 400px;
+  width: 266px;
+  transform: translateY(+50%);
+}
+
+.no-poster[alt='упс...у фильма нет постера'] {
+  color: red;
+}
+
+.movie-name {
+  color: var(--Grey-50, #ebeef5);
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+}
+.movie-name:hover {
+  cursor: pointer; /* Изменение формы курсора при наведении */
+}

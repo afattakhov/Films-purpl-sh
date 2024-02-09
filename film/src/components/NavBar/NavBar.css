@@ -1,0 +1,42 @@
+/* NavBar.css */
+.navbar-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 16px 120px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  background-color:var(--Black-10, rgba(0, 0, 0, 0.10));
+  background: rgba(18, 24, 41, 0.8);
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+}
+
+.navbar-link-block {
+  display: flex;
+  align-items: center;
+}
+
+.logo-navbar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.link-navbar {
+  color: var(--Grey-200, #a8aebf);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* font-family: Poppins; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  /* white-space: nowrap; */
+}
