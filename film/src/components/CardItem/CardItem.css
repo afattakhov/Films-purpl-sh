@@ -21,7 +21,7 @@
 }
 .no-poster {
   min-height: 400px;
-  width: 266px;
+  min-width: 266px;
   transform: translateY(+50%);
 }
 
