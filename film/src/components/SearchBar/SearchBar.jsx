@@ -1,7 +1,7 @@
-import './SearchBar.css';
+import styles from './SearchBar.module.css';
 
 function SearchBar({ text }) {
-  return <h1 className="search">{text}</h1>;
+  return <h1 className={styles.search}>{text}</h1>;
 }
 
 export default SearchBar;

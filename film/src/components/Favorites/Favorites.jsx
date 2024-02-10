@@ -1,8 +1,8 @@
-import './Favorites.css';
+import styles from './Favorites.module.css';
 
 function Favorites() {
   return (
-    <button className="favorites">
+    <button className={styles.favorites}>
       <img src="/like.svg" alt="лайк" /> В избранное
     </button>
   );

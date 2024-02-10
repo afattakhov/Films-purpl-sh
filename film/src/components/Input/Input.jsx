@@ -1,12 +1,12 @@
-import './Input.css';
-
+import styles from './Input.module.css';
+import classNames from 'classnames';
 function Input() {
   return (
     <div>
       <input
         type="text"
         name="title"
-        className="input input-placeholder input-find"
+        className={classNames(styles.input, styles['input-placeholde'], styles["input-find"])}
         placeholder="текст плейсхолдера"
       />
     </div>

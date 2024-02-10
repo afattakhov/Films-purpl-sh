@@ -1,21 +1,21 @@
 import CardRaiting from '../CardRaiting/CardRaiting';
 import Favorites from '../Favorites/Favorites';
-import './CardItem.css';
+import styles from './CardItem.module.css';
+import classNames from 'classnames';
 
 function CardItem({ data }) {
   if (!data?.title) return null;
   return (
-    <div className="card-item">
-      <a href="#" className="poster-link">
+    <div className={styles['card-item']}>
+      <a href="#" className={styles['poster-link']}>
         <img
-          className={!data.picture ? 'no-poster' : 'poster'}
+          className={classNames(styles.poster, { [styles['no-poster']]: !data.picture })}
           src={data.picture}
           alt="упс...у фильма нет постера"
         />
       </a>
-      {!data.rating && <CardRaiting> Нет оценок</CardRaiting>}
-      {data.rating && <CardRaiting>{data.rating}</CardRaiting>}
-      <a className="movie-name">{data?.title}</a>
+      <CardRaiting>{data.rating ? data.rating : 'Нет оценок'}</CardRaiting>
+      <a className={styles["movie-name"]}>{data?.title}</a>
       <Favorites />
     </div>
   );
