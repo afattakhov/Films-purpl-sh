@@ -9,7 +9,7 @@ const moviesData = [
     id: 1,
     picture: '/Movie-1.svg',
     title: 'Movie 1',
-    rating: 123,
+    rating: "0",
   },
   {
     id: 2,

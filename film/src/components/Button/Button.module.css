@@ -19,3 +19,6 @@
 .accent {
   background: var(--Primary-400, #7b6ef6);
 }
+.button-of-auth {
+  width: 201px;
+}

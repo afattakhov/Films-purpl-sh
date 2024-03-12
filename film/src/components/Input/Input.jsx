@@ -1,16 +1,19 @@
+import { forwardRef, useRef } from 'react';
 import styles from './Input.module.css';
 import classNames from 'classnames';
-function Input() {
+const Input= forwardRef( function Input({ className, typeOfinput, ...rest },ref) {
+
   return (
     <div>
       <input
-        type="text"
-        name="title"
-        className={classNames(styles.input, styles['input-placeholde'], styles["input-find"])}
-        placeholder="текст плейсхолдера"
+        {...rest}
+        ref={ref}
+        className={classNames(className, styles.input, styles['input-placeholde'], {
+          [styles['input-find']]: typeOfinput === 'title',
+        })}
       />
     </div>
   );
-}
+})
 
 export default Input;
