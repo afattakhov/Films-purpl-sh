@@ -1,8 +1,8 @@
-import './CardRaiting.css';
+import styles from './CardRaiting.module.css';
 
 function CardRaiting({ children }) {
   return (
-    <div className="rating-style">
+    <div className={styles["rating-style"]}>
       <img src="/star.svg" alt="звезда" />
       {children}
     </div>

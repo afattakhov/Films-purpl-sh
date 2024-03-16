@@ -1,22 +1,44 @@
-import './NavBar.css';
+
+
+////комопнент NavBar
+
+import { useContext } from 'react';
+import styles from './NavBar.module.css';
+import { Usercontext } from '../../context/user.context';
 
 function NavBar() {
+  const { dataOfItems, setDataOfItems, inputRef } = useContext(Usercontext);
+  const authNameForDisplay = dataOfItems?.filter((oneObj) => oneObj.islogined == true)[0];
+  const handleClick = () => {
+    setDataOfItems([...dataOfItems.map((elObj) => ({ ...elObj, islogined: false }))]);
+
+  };
+  const handleClickEnter = () => {
+
+    inputRef.current.focus();
+  };
+
   return (
-    <div className="navbar-panel">
-      <div className="navbar-link-block">
-        <img className="logo-navbar" src="/Bookmark.svg" alt="лого" />
+    <div className={styles['navbar-panel']}>
+      <div className={styles['navbar-link-block']}>
+        <img className={styles['logo-navbar']} src="/Bookmark.svg" alt="лого" />
       </div>
 
-      <div className="navbar-link-block">
-        <a href="#" className="link-navbar">
+      <div className={styles['navbar-link-block']}>
+        <a href="#" className={styles['link-navbar']}>
           Поиск Фильмов
         </a>
-        <a href="#" className="link-navbar">
+        <a href="#" className={styles['link-navbar']}>
           Мои фильмы
         </a>
-        <a href="#" className="link-navbar">
-          Войти
+        <a onClick={handleClickEnter} className={styles['link-navbar']}>
+          {authNameForDisplay?.islogined == true ? authNameForDisplay.user : 'Войти'}
         </a>
+        {authNameForDisplay?.islogined == true ? (
+          <a onClick={handleClick} className={styles['link-navbar']}>
+            Выйти
+          </a>
+        ) : null}
       </div>
     </div>
   );

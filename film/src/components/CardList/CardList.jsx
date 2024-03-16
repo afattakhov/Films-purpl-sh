@@ -1,13 +1,15 @@
 import { useState } from 'react';
-import './CardList.css';
+
 import CardItem from '../CardItem/CardItem';
+import styles from './CardList.module.css'; // Assuming you have a CardList.module.css file
+
 
 const moviesData = [
   {
     id: 1,
     picture: '/Movie-1.svg',
     title: 'Movie 1',
-    rating: 123,
+    rating: "0",
   },
   {
     id: 2,
@@ -52,13 +54,13 @@ const moviesData = [
     rating: 246,
   },
 ];
-
 function CardList() {
   const [data, setData] = useState(moviesData);
-  if (!data || !data.length) return <p className="cardlist_no">Упс... Таких фильмов нет</p>; // учел и отсувие data (undefined, null) и пустой массив
+  if (!data || !data.length) return <p className={styles.cardlistNo}>Упс... Таких фильмов нет</p>;
+
   return (
     <div>
-      <div className="cardlist">
+      <div className={styles.cardlist}>
         {data.map((el) => (
           <CardItem key={el.id} data={el} />
         ))}

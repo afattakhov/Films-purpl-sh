@@ -1,7 +1,7 @@
-import './Paragraf.css';
+import styles from './Paragraf.module.css';
 
 function Paragraf({ text }) {
-  return <div className="parag">{text}</div>;
+  return <div className={styles.parag}>{text}</div>;
 }
 
 export default Paragraf;

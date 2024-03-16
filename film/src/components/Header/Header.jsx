@@ -1,3 +1,4 @@
+////комопнент Header
 import { useState } from 'react';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
@@ -10,13 +11,20 @@ function Header() {
   const clickHandle = () => {
     setCklickRes(clickRes);
   };
+
   return (
     <div className="header-container">
       <NavBar />
       <SearchBar text="Поиск" />
       <Paragraf text="Введите название фильма, сериала или мультфильма для поиска и добавления в избранное." />
       <div className="input-button-main">
-        <Input />
+        <Input
+          type="text"
+          name="title"
+          placeholder="текст плейсхолдера"
+          className=""
+          typeOfinput="title"
+        />
         <Button text="Искать" onClick={clickHandle} />
       </div>
     </div>
