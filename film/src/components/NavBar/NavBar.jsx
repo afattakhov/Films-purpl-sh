@@ -1,7 +1,13 @@
-//комопнент NavBar
-import styles from './NavBar.module.css';
 
-function NavBar({ dataOfItems, setDataOfItems, inputRef }) {
+
+////комопнент NavBar
+
+import { useContext } from 'react';
+import styles from './NavBar.module.css';
+import { Usercontext } from '../../context/user.context';
+
+function NavBar() {
+  const { dataOfItems, setDataOfItems, inputRef } = useContext(Usercontext);
   const authNameForDisplay = dataOfItems?.filter((oneObj) => oneObj.islogined == true)[0];
   const handleClick = () => {
     setDataOfItems([...dataOfItems.map((elObj) => ({ ...elObj, islogined: false }))]);

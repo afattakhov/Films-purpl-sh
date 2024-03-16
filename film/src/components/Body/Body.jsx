@@ -1,22 +1,23 @@
 ////комопнент Body
+import { useContext } from 'react';
 import Button from '../Button/Button';
 import CardList from '../CardList/CardList';
 import Input from '../Input/Input';
-
 import styles from './Body.module.css';
+import { Usercontext } from '../../context/user.context';
 function customMap(dataOfItems) {
   if (!dataOfItems) {
     return [];
   }
   return dataOfItems.map((oneObj) => oneObj.user);
 }
-function Body({ setState, state, dataOfItems, setDataOfItems, inputRef }) {
-
+function Body() {
+  const { dataOfItems, setDataOfItems, setState, state, inputRef } = useContext(Usercontext);
   const hadlChange = (e) => {
     const inputValue = e.target.value.trim();
-// if(!inputValue){
-//   return;
-// }
+    // if (inputValue=== "") {
+    //   return;
+    // }
     setState(inputValue);
   };
   const addNewItem = () => {
